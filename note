@@ -1,0 +1,11 @@
+// Define an array of birthday wishes to rotate through
+const birthdayWishes = [
+  "Happy Birthday! 🎉 Wishing you a day filled with love and joy!",
+  "Have a fantastic birthday! 🎂 May all your dreams come true!",
+  "Cheers to you on your special day! 🥳 Here's to another year of amazing adventures!",
+  "Wishing you a wonderful birthday full of happiness and laughter! 🎈",
+  "Happy Birthday to someone truly special! 🎁 Hope this year brings you endless smiles!",
+  "May your birthday be the start of a year filled with good health, happiness, and success! 🎉"
+];
+
+let wishIndex = 0;

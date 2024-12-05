@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0a0a23;
+  --tree-color: #6bff88;
+  --orb-color-start: #23c7ff;
+  --orb-color-end: #ffaaff;
+}
+
+body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.forest {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tree {
+  position: absolute;
+  bottom: 0;
+  width: 2vmin;
+  height: 40vmin;
+  background: linear-gradient(to top, var(--tree-color), transparent);
+  border-radius: 1vmin;
+  animation: grow-tree 5s ease-out infinite alternate;
+}
+
+.tree--1 {
+  left: 20%;
+  animation-delay: 1s;
+}
+.tree--2 {
+  left: 50%;
+  animation-delay: 2s;
+}
+.tree--3 {
+  left: 80%;
+  animation-delay: 3s;
+}
+
+.orb {
+  position: absolute;
+  bottom: 100%;
+  width: 1vmin;
+  height: 1vmin;
+  background: radial-gradient(circle, var(--orb-color-start), var(--orb-color-end));
+  border-radius: 50%;
+  filter: blur(0.3vmin);
+  opacity: 0.7;
+  animation: float-orb 4s linear infinite;
+}
+
+@keyframes grow-tree {
+  from {
+    height: 10vmin;
+  }
+  to {
+    height: 40vmin;
+  }
+}
+
+@keyframes float-orb {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(calc(-20px + 40px * random()), -80vmin) scale(1.2);
+    opacity: 0;
+  }
+}

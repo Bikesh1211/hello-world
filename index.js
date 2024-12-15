@@ -1,8 +1,8 @@
 onload = () => {
-     // Play the audio as soon as the page is loaded
-     const audio = document.getElementById("background-audio");
-     audio.play();  // Play audio when the page loads
-
+  const audio = document.getElementById('background-audio');
+  audio.play().catch(function(error) {
+    console.log("Error playing audio: ", error);
+  });
   const c = setTimeout(() => {
     document.body.classList.remove("not-loaded");
     clearTimeout(c);

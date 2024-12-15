@@ -995,11 +995,11 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  /* opacity: 0; */
   animation: fadeIn 5 ease-in-out forwards;
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translate(-50%, -60%);
@@ -1012,4 +1012,13 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
     opacity: 0;
     transform: translate(-50%, -40%);
   }
+} */
+
+.hello-world {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hello-world.fade-in {
+  opacity: 1;
 }

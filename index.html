@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Happy Birthday Bidwota</title>
     <link rel="stylesheet" href="styles.css">
 </head>
   
 <body class="not-loaded">
-
+  <!-- Add id to audio element -->
+  <audio id="background-audio" autoplay loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>  
       
     <div class="night"></div>
     <div class="hello-world">
+      
 </div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -311,6 +316,13 @@
         </div>
       </div>
     </div>
+    <script>
+      // Play the audio as soon as the page is loaded
+      window.onload = function() {
+          var audio = document.getElementById("background-audio");
+          audio.play();  // Play audio when the page loads
+      }
+  </script>
     <script src="index.js"></script>
   </body>
 
